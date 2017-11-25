@@ -31,6 +31,8 @@ abstract class Segment_Commerce {
 		$this->registered_events = array(
 			'viewed_category',
 			'viewed_product',
+			'viewed_cart',
+			'viewed_checkout',
 			'added_to_cart',
 			'removed_from_cart',
 			'completed_order',
