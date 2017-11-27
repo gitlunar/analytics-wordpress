@@ -6,6 +6,6 @@ version=$(cat "${ROOT_DIR}/analytics-wordpress.php" | sed -nE "s/^Version: (.*)$
 zip_file="${ROOT_DIR}/SegmentAnalyticsWordpress_${version}.zip"
 rm -f "${zip_file}";
 pushd "${ROOT_DIR}";
-zip -r "${zip_file}" "${ROOT_DIR}/"* -x "bin/"* "tests/"* "${ROOT_DIR}/.travis.yml" "${ROOT_DIR}/.gitignore" "${ROOT_DIR}/readme.md" "${ROOT_DIR}/phpunit.xml";
+zip -r "${zip_file}" * -x bin/ bin/* tests/ tests/* .travis.yml .gitignore readme.md phpunit.xml;
 ls "${zip_file}";
 popd;
